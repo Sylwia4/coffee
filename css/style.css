@@ -1,0 +1,282 @@
+html {
+  height: 100%;
+}
+
+p {
+  font-size: 1vw;
+  font-family: 'Kavivanar', cursive;
+  text-indent: 4vw;
+}
+
+h3 {
+  font-size: 2vw;
+  font-family: 'Kavivanar', cursive;
+  text-indent: 6vw;
+}
+
+h2 {
+  font-size: 2vw;
+  text-indent: 2vw;
+  font-family: 'Jua', sans-serif;
+}
+
+h1 {
+  font-size: 3vw;
+  text-indent: 4vw;
+  font-family: 'Kavivanar', cursivef;
+}
+
+body {
+  background: #ddf4fb;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1fr 0.5fr 25px;
+  grid-template-areas: "home" "oferta" "kontakt" "footer";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "panel logo menu";
+  position: fixed;
+  contain: "";
+  width: 100%;
+  top: 2%;
+  left: 0;
+  z-index: 5;
+  font-size: 3vw;
+}
+
+.panel {
+  width: 100%;
+  grid-area: panel;
+  box-shadow: 0 1px 4px 2px #095d53;
+  border-radius: 0 15px 15px 0;
+  background: #0CA5B0;
+}
+
+.logo {
+  width: 100%;
+  grid-area: logo;
+  padding: 0 2% 0 10%;
+  font-family: 'Lobster', cursive;
+  color: #FEFEEB;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  grid-area: menu;
+  box-shadow: 0 1px 4px 2px #095d53;
+  border-radius: 15px 0 0 15px;
+  background: #0CA5B0;
+  font-family: 'Lobster', cursive;
+}
+
+.menu ul {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu li {
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.menu li.active a {
+  color: white;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5%;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  grid-area: home;
+  background-image: url("../images/home.jpg");
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*opacity:0.5;*/
+}
+
+.oferta {
+  grid-area: oferta;
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "m c1 c2" "m c3 c4";
+  padding: 5% 2% 2% 2%;
+  background: #f4e9d3;
+  grid-gap: 5% 5%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.kontakt {
+  grid-area: kontakt;
+  background-image: url("../images/tab.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "d1 d2";
+  padding: 5% 10% 5% 10%;
+  grid-gap: 5% 5%;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 3px;
+  font-size: 1em;
+  border-top: 1px solid white;
+  background: #231f20;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+#m {
+  grid-area: m;
+  background-image: url("../images/tab.jpg");
+  box-shadow: 5px 5px 10px #595c5d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#c1 {
+  grid-area: c1;
+  background-image: url("../images/k1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+#c2 {
+  grid-area: c2;
+}
+
+#c3 {
+  grid-area: c3;
+}
+
+#c4 {
+  grid-area: c4;
+  background-image: url("../images/k2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+#d1 {
+  grid-area: d1;
+  background: #ffffffe6;
+  border-radius: 25px;
+  margin-right: 5%;
+}
+
+#d2 {
+  grid-area: d2;
+  background-image: url("../images/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+#e1 {
+  color: white;
+  top: 25%;
+  left: 12%;
+  z-index: 5;
+  animation-name: example;
+  animation-duration: 3s;
+}
+
+@keyframes example {
+  from {
+    color: white;
+  }
+  to {
+    color: #d72020;
+  }
+}
+
+@media (max-width: 700px) {
+  p {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-areas: "menu";
+    font-size: 6vw;
+  }
+  .panel {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    border-radius: 0 0 0 0;
+  }
+  .oferta {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "m m" "c1 c2" "c3 c4";
+  }
+  #m {
+    text-align: center;
+  }
+  #c1, #c4 {
+    background-size: contain;
+  }
+  .kontakt {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "d1" "d2";
+  }
+}
